@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel='stylesheet'>
+
+  </head>
+  <body>
+
+    <!-- Main body -->
+    <div class="background">
+
+    <!-- Text input fields -->
+    <div class="container">
+      <p class="title">Duolingo Application: Anagram Checker</p>
+      <p class="subtitle">Enter two strings below and check to see if they're anagrams.</p>
+      <form id="anagram_check" onsubmit="return false;">
+        <input type="text" id="first_string" placeholder="Enter a string..." required>
+        <input type="text" id="second_string" placeholder="Enter another string..." required>
+        <div id = "results">
+        </div>
+        <input type="submit" id="submit-button">
+      </form>
+    </div>
+    </div>
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
