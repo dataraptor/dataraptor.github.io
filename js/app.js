@@ -3,7 +3,7 @@ var submit = function() {
     var firstString = String($('#first_string').val());
     var secondString = String($('#second_string').val());
     
-    if (firstString != '' && secondString !=''){
+    if (firstString !='' && secondString !=''){
       var anagram = checkAnagram(firstString, secondString);
 
       if(anagram) {
@@ -21,7 +21,7 @@ var submit = function() {
 
 /* Uses regex to remove punctuation and numbers from the words */
 function cleanWord(word) {
-  return word.replace(/[^A-Za-z0-9]+/g, '');
+  return word.replace(/[^A-Za-z]+/g, '');
 }
 
 /* Splits the cleaned word into a character array, sorts it alphabetically, and returns the alphabetically sorted string */
