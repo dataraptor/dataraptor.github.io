@@ -4,7 +4,7 @@ var submit = function() {
     var secondString = String($('#second_string').val());
     
     /* Checks to see if the word is only numbers and punctuation */
-    if (cleanWord(firstString) !='' && cleanWord(secondString) !=''){
+    if (cleanWord(firstString) !="" && cleanWord(secondString) !=""){
       var anagram = checkAnagram(firstString, secondString);
 
       if(anagram) {
