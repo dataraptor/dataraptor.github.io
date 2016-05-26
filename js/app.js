@@ -4,7 +4,15 @@ var submit = function() {
     var secondString = String($('#second_string').val());
     
     /* Checks to see if the word is only numbers and punctuation */
-    if (cleanWord(firstString) !="" && cleanWord(secondString) !=""){
+    if (cleanWord(firstString) === "" || cleanWord(secondString) ===""){
+
+      /* Prompts the user to enter strings without numbers or punctuation */
+      $('#results').html("<p>Enter two strings. Numbers and punctuation are ignored<p>");
+
+    }
+
+    /* Otherwise if everything is good, runs the anagram function */
+    else{
       var anagram = checkAnagram(firstString, secondString);
 
       if(anagram) {
@@ -13,11 +21,6 @@ var submit = function() {
       else {
         $('#results').html("<p>Nope, the two strings are not anagrams<p>"); 
       }  
-    }
-
-    /* Prompts the user to enter strings without numbers or punctuation */
-    else{
-      $('#results').html("<p>Enter two strings. Numbers and punctuation are ignored<p>");
     }
   });
 };
